@@ -72,12 +72,6 @@ namespace Test_33.Services
                 Console.WriteLine($"Message recived: {newmessage}");
                 await deviceClient.CompleteAsync(payload);
             }
-
-
-
         }
-
-
-
     }
 }

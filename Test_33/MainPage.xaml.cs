@@ -7,11 +7,8 @@ using Windows.UI.Xaml.Controls;
 
 namespace Test_33
 {
-
-
     public sealed partial class MainPage : Page
     {
-        
         public MainPage()
         {
             this.InitializeComponent();

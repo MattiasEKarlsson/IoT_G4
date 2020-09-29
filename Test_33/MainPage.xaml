@@ -9,7 +9,6 @@
     Background ="DimGray">
 
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="300"/>
             <RowDefinition Height = "600"/>
@@ -17,7 +16,5 @@
         <StackPanel Grid.Row="0">
             <Button Background="#FFB4B0B0" x:Name="btnSend" Content="Press to send." Margin="50,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btnSend_Click" FontSize="45" Height="80" Width="300"/>
         </StackPanel>
-        
-
     </Grid>
 </Page>
