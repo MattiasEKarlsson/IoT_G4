@@ -23,13 +23,13 @@ namespace Test_33.Services
 
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
-                    var content = httpResponseMessage.Content;                                    //Hämtar Api
+                    var content = httpResponseMessage.Content;                                  
                     var datatemp = await content.ReadAsAsync<Rootobject>();
 
-                    double temp = datatemp.current.temp;                                                // Sätter Temp och Humidity
+                    double temp = datatemp.current.temp;                                               
                     int humidity = datatemp.current.humidity;
 
-                    senddata = new TemperatureModel                                              //Lägger Temp och Humidity i samma objekt.
+                    senddata = new TemperatureModel                                              
                     {
                         Temperature = temp,
                         Humidity = humidity
@@ -44,11 +44,11 @@ namespace Test_33.Services
 
             try
             {
-                var json = JsonConvert.SerializeObject(senddata);                                        // Converterar till Json format.
+                var json = JsonConvert.SerializeObject(senddata);                                       
 
-                var payload = new Message(Encoding.UTF8.GetBytes(json));                             // Packeterar meddelandena
+                var payload = new Message(Encoding.UTF8.GetBytes(json));                             
 
-                await deviceClient.SendEventAsync(payload);                                         // Skickar
+                await deviceClient.SendEventAsync(payload);                                         
 
                 Console.WriteLine($"Message Sent: {json}");
             }

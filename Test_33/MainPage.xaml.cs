@@ -5,6 +5,7 @@ using Windows.UI.Xaml.Controls;
 
 
 
+
 namespace Test_33
 {
     public sealed partial class MainPage : Page
@@ -18,7 +19,7 @@ namespace Test_33
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-            DeviceService.SendMessageAsync(deviceClient).GetAwaiter();
+          DeviceService.SendMessageAsync(deviceClient).GetAwaiter();
         }
     }
 }
